@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# Binaries
+bin/
+
+# IDEA files
+.idea/
