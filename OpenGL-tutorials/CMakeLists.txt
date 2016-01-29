@@ -19,7 +19,7 @@ SET(EXTRA_LIBS ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
 set(SOURCE_FILES "lesson 1 – opening a window/main.cpp")
 add_executable(lesson_1 ${SOURCE_FILES})
 
-# Lesson 1 – The first triangle
+# Lesson 2 – The first triangle
 set(SOURCE_FILES
     "lesson 2 – the first triangle/main.cpp"
     "common/shader.cpp" "common/shader.h"
