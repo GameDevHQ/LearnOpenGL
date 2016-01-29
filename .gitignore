@@ -32,3 +32,6 @@ bin/
 
 # IDEA files
 .idea/
+
+# Mac OS stuff
+.DS_Store
