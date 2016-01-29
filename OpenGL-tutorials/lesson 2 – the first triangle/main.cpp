@@ -2,6 +2,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
+#include "../common/shader.h"
+
 const int window_width = 800;
 const int window_height = 600;
 
@@ -27,6 +29,9 @@ void ChangeGlfwWindowParams() {
 void PrepareGlfwWindow(GLFWwindow* window) {
     // Enable keyboard support
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+
+    // Set to black background
+    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 }
 
 
@@ -39,7 +44,8 @@ bool CloseWindowIsNotRequired(GLFWwindow *window) {
 
 int main() {
     GLFWwindow * window;
-    GLuint VertexArrayID, VertexBuffer;
+    GLuint VertexArrayID, VertexBuffer, ProgramID;
+
 
     if( !glfwInit() ) {
         std::cout << "Error GLFW initialize." << std::endl;
@@ -68,6 +74,9 @@ int main() {
     glGenVertexArrays(1, &VertexArrayID);
     glBindVertexArray(VertexArrayID);
 
+    // Create and compile GLSL program from the shaders
+    ProgramID = LoadShaders("VertexShader.glsl", "FragmentShader.glsl");
+
     // Create one buffer and bind it with VertexBuffer
     glGenBuffers(1, &VertexBuffer);
     // Use array as a buffer
@@ -77,10 +86,14 @@ int main() {
 
     // Redraw window
     while(CloseWindowIsNotRequired(window)) {
-        glfwSwapBuffers(window);
-        glfwPollEvents();
 
-        // Disable generic vertex attribute array
+        // Clear the screen
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+        // Use generated shader
+        glUseProgram(ProgramID);
+
+        // Enable generic vertex attribute array
         glEnableVertexAttribArray(0);
         // Bind buffer once more time
         glBindBuffer(GL_ARRAY_BUFFER, VertexBuffer);
@@ -88,9 +101,19 @@ int main() {
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
         // Draw our triangle
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        // Revert changes with vertex attribute array
+        // Disable generic vertex attribute array
         glDisableVertexAttribArray(0);
+
+        glfwSwapBuffers(window);
+        glfwPollEvents();
     }
+
+    // Cleanup
+    glDeleteBuffers(1, &VertexBuffer);
+    glDeleteVertexArrays(1, &VertexArrayID);
+    glDeleteProgram(ProgramID);
+
+    glfwTerminate();
 
     return 0;
 }

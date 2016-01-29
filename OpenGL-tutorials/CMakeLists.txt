@@ -20,6 +20,12 @@ set(SOURCE_FILES "lesson 1 – opening a window/main.cpp")
 add_executable(lesson_1 ${SOURCE_FILES})
 
 # Lesson 1 – The first triangle
-set(SOURCE_FILES "lesson 2 – the first triangle/main.cpp")
+set(SOURCE_FILES
+    "lesson 2 – the first triangle/main.cpp"
+    "common/shader.cpp" "common/shader.h"
+    "common/utils.cpp" "common/utils.h"
+    "lesson 2 – the first triangle/VertexShader.glsl"
+    "lesson 2 – the first triangle/FragmentShader.glsl"
+)
 add_executable(lesson_2 ${SOURCE_FILES})
 target_link_libraries(lesson_2 ${EXTRA_LIBS})
