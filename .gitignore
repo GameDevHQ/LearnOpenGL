@@ -35,3 +35,6 @@ bin/
 
 # Mac OS stuff
 .DS_Store
+
+# CMake debug builds
+cmake-build-debug/
