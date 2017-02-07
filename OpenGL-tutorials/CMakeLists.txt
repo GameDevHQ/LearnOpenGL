@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.3)
+cmake_minimum_required(VERSION 3.6)
 
-project(OpenGL-tutorials)
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_BUILD_TYPE Release)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -I/usr/local/include -L/usr/local/lib -std=c++11")
 set(CMAKE_BINARY_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_EXE_LINKER_FLAGS -lglfw3)
@@ -11,21 +11,12 @@ find_package(OPENGL REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIRS})
 
 find_package(GLEW REQUIRED)
-include_directories(${GLEW_INCLUDE_DIRS})
+if (GLEW_FOUND)
+    include_directories(${GLEW_INCLUDE_DIRS})
+    link_libraries(${GLEW_LIBRARIES})
+endif()
 
 SET(EXTRA_LIBS ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES})
 
 # Lesson 1 – Opening a window
-set(SOURCE_FILES "lesson 1 – opening a window/main.cpp")
-add_executable(lesson_1 ${SOURCE_FILES})
-
-# Lesson 2 – The first triangle
-set(SOURCE_FILES
-    "lesson 2 – the first triangle/main.cpp"
-    "common/shader.cpp" "common/shader.h"
-    "common/utils.cpp" "common/utils.h"
-    "lesson 2 – the first triangle/VertexShader.glsl"
-    "lesson 2 – the first triangle/FragmentShader.glsl"
-)
-add_executable(lesson_2 ${SOURCE_FILES})
-target_link_libraries(lesson_2 ${EXTRA_LIBS})
+add_subdirectory("lesson 1 – opening a window")
