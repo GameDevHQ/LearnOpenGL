@@ -26,3 +26,6 @@ add_subdirectory("lesson 1 – opening a window")
 
 # Lesson 2 - The first triangle
 add_subdirectory("lesson 2 – the first triangle")
+
+# Lesson 3 – Matrices
+add_subdirectory("lesson 3 – matrices")
