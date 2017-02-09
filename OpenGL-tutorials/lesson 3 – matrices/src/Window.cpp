@@ -77,7 +77,10 @@ void Window::Run()
     // STEP 1: Load shaders, and prepare views with shaders before rendering a triangle.
     // ----------------------------------------------------------------------------------
     // Load shaders from the GLSL sources.
-    GLuint programID = LoadShaders("../shaders/SimpleTransform.glsl", "../shaders/FragmentShader.glsl");
+    GLuint programID = LoadShaders(
+            "../lesson 3 – matrices/SimpleTransform.glsl",
+            "../lesson 3 – matrices/FragmentShader.glsl"
+    );
 
     // Projection matrix (perspective)
     glm::mat4 projectionView = glm::perspective(FOV, ASPECT_RATIO, Z_NEAR, Z_FAR);
@@ -159,6 +162,11 @@ void Window::Run()
         glfwPollEvents();
     }
     while (Input::IsKeyPressed(window, KEYBOARD_KEY::ESC) && glfwWindowShouldClose(window) == 0);
+
+    // Cleanup VBO and shader
+    glDeleteBuffers(1, &vertexBuffer);
+    glDeleteProgram(programID);
+    glDeleteVertexArrays(1, &vertexArrayID);
 
     glfwTerminate();
 }

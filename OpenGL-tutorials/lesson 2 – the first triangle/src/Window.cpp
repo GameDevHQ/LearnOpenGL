@@ -75,7 +75,10 @@ void Window::Run()
     // Put into bounded array our data.
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
 
-    GLuint programID = LoadShaders("../shaders/VertexShader.glsl", "../shaders/FragmentShader.glsl");
+    GLuint programID = LoadShaders(
+            "../lesson 2 – the first triangle/VertexShader.glsl",
+            "../lesson 2 – the first triangle/FragmentShader.glsl"
+    );
 
     do
     {
@@ -100,6 +103,11 @@ void Window::Run()
         glfwPollEvents();
     }
     while (Input::IsKeyPressed(window, KEYBOARD_KEY::ESC) && glfwWindowShouldClose(window) == 0);
+
+    // Cleanup VBO
+    glDeleteBuffers(1, &vertexBuffer);
+    glDeleteVertexArrays(1, &vertexArrayID);
+    glDeleteProgram(programID);
 
     glfwTerminate();
 }
