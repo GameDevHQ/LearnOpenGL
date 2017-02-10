@@ -30,5 +30,8 @@ add_subdirectory("lesson 2 – the first triangle")
 # Lesson 3 – Matrices
 add_subdirectory("lesson 3 – matrices")
 
-# Lesson – A colored cube
+# Lesson 4 – A colored cube
 add_subdirectory("lesson 4 – a colored cube")
+
+# Lesson 5 – A textured cube
+add_subdirectory("lesson 5 – a textured cube")
