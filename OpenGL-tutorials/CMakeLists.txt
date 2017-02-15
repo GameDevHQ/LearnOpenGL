@@ -35,3 +35,6 @@ add_subdirectory("lesson 4 – a colored cube")
 
 # Lesson 5 – A textured cube
 add_subdirectory("lesson 5 – a textured cube")
+
+# Lesson 6 – Keyboard and mouse
+add_subdirectory("lesson 6 – keyboard and mouse")
