@@ -169,7 +169,7 @@ void Window::Run()
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_uv_buffer_data), g_uv_buffer_data, GL_STATIC_DRAW);
 
     // Load a texture...
-    GLuint texture = loadBMP_custom("../lesson 6 – keyboard and mouse/uvtemplate.bmp");
+    GLuint texture = loadBMP_custom("../resources/uvtemplate.bmp");
 
     // Get a handle for our "myTextureSampler" uniform
     GLint textureID  = glGetUniformLocation(programID, "myTextureSampler");

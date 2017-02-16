@@ -191,7 +191,7 @@ void Window::Run()
 
     // Load a texture...
     // GLuint texture = loadBMP_custom("../lesson 5 – a textured cube/uvtemplate.bmp");
-    GLuint texture = loadDDS("../lesson 5 – a textured cube/uvtemplate.dds");
+    GLuint texture = loadDDS("../resources/uvtemplate.dds");
 
     // Get a handle for our "myTextureSampler" uniform
     GLint textureID  = glGetUniformLocation(programID, "myTextureSampler");
