@@ -38,3 +38,6 @@ add_subdirectory("lesson 5 – a textured cube")
 
 # Lesson 6 – Keyboard and mouse
 add_subdirectory("lesson 6 – keyboard and mouse")
+
+# Lesson 7 – Model loading
+add_subdirectory("lesson 7 – model loading")
