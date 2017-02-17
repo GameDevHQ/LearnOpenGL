@@ -41,3 +41,6 @@ add_subdirectory("lesson 6 – keyboard and mouse")
 
 # Lesson 7 – Model loading
 add_subdirectory("lesson 7 – model loading")
+
+# Lesson 8 – Basic shading
+add_subdirectory("lesson 8 – basic shading")
