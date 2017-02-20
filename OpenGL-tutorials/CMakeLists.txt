@@ -44,3 +44,6 @@ add_subdirectory("lesson 7 – model loading")
 
 # Lesson 8 – Basic shading
 add_subdirectory("lesson 8 – basic shading")
+
+# Lesson 9 – VBO indexing
+add_subdirectory("lesson 9 – vbo indexing")
