@@ -47,3 +47,6 @@ add_subdirectory("lesson 8 – basic shading")
 
 # Lesson 9 – VBO indexing
 add_subdirectory("lesson 9 – vbo indexing")
+
+# Lesson 10 - Transparency
+add_subdirectory("lesson 10 – transparency")
