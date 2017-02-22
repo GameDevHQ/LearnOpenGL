@@ -50,3 +50,6 @@ add_subdirectory("lesson 9 – vbo indexing")
 
 # Lesson 10 - Transparency
 add_subdirectory("lesson 10 – transparency")
+
+# Lesson 11 – 2D text
+add_subdirectory("lesson 11 – 2d text")
