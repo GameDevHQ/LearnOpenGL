@@ -53,3 +53,6 @@ add_subdirectory("lesson 10 – transparency")
 
 # Lesson 11 – 2D text
 add_subdirectory("lesson 11 – 2d text")
+
+# Lesson 12 – Extensions
+add_subdirectory("lesson 12 – extensions")
