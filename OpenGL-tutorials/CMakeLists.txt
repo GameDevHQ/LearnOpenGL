@@ -56,3 +56,6 @@ add_subdirectory("lesson 11 – 2d text")
 
 # Lesson 12 – Extensions
 add_subdirectory("lesson 12 – extensions")
+
+# Lesson 13 – Normal mapping
+add_subdirectory("lesson 13 – normal mapping")
