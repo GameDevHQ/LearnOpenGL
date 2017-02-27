@@ -59,3 +59,6 @@ add_subdirectory("lesson 12 – extensions")
 
 # Lesson 13 – Normal mapping
 add_subdirectory("lesson 13 – normal mapping")
+
+# Lesson 14 - Render to texture
+add_subdirectory("lesson 14 – render to texture")
