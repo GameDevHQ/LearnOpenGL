@@ -191,7 +191,7 @@ void Window::Run()
     // Create and compile our GLSL program from the shaders
     GLuint quad_programID = LoadShaders(
             "../lesson 14 – render to texture/Passthrough.glsl",
-            "../lesson 14 – render to texture/WobblyTexture.glsl"
+            "../lesson 14 – render to texture/SimpleTexture.glsl"
     );
     GLint texID = glGetUniformLocation(quad_programID, "renderedTexture");
     GLint timeID = glGetUniformLocation(quad_programID, "time");

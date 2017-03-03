@@ -65,3 +65,6 @@ add_subdirectory("lesson 14 – render to texture")
 
 # Lesson 15 – Lightmaps
 add_subdirectory("lesson 15 – lightmaps")
+
+# Lesson 16 – Shadow mapping
+add_subdirectory("lesson 16 – shadow mapping")
