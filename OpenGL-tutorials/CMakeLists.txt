@@ -68,3 +68,6 @@ add_subdirectory("lesson 15 – lightmaps")
 
 # Lesson 16 – Shadow mapping
 add_subdirectory("lesson 16 – shadow mapping")
+
+# Lesson 17 – Quaternions
+add_subdirectory("lesson 17 - quaternions")
