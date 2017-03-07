@@ -71,3 +71,6 @@ add_subdirectory("lesson 16 – shadow mapping")
 
 # Lesson 17 – Quaternions
 add_subdirectory("lesson 17 - quaternions")
+
+# Lesson 18 – Billboards & Particles (part 1)
+add_subdirectory("lesson 18 – billboards")
