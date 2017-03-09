@@ -74,3 +74,6 @@ add_subdirectory("lesson 17 - quaternions")
 
 # Lesson 18 – Billboards & Particles (part 1)
 add_subdirectory("lesson 18 – billboards")
+
+# Lesson 18 – Billboards & Particles (part 2)
+add_subdirectory("lesson 18-2 – particles instancing")
