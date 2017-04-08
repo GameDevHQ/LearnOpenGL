@@ -1,7 +1,6 @@
 # LearnOpenGL
 This repository contains solutions, which have written (and sometimes just copied from the tutorial repository) in C++ for tasks from websites dedicated to the programming with OpenGL:
 - [OpenGL tutorials](http://www.opengl-tutorial.org/)
-- [OGLDev – Modern OpenGL tutorials](http://ogldev.atspace.co.uk/)
 
 Requirements
 ------------
